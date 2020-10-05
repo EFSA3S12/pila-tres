@@ -1,0 +1,57 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dospilasunoacien;
+
+/**
+ *
+ * @author eduardo
+ */
+import java.util.Scanner;
+import java.util.Stack;
+public class DosPilasUnoACien {
+    public static void main(String[] args) {
+        
+        int n;
+        Stack sc= new Stack();
+        Scanner rt = new Scanner(System.in);
+        System.out.println("Tamaño de la pila");
+        n=rt.nextInt();
+    
+        for(n=1; n<100; n++){
+            System.out.println(n+1); 
+            sc.push(n);
+            
+        }
+        ImprimirPila(sc);
+    }
+    public static void ImprimirPila( Stack pilaImprimir)
+    {
+        for(int i = pilaImprimir.size()-1; i>=0; i--)
+        {
+            System.out.println(pilaImprimir.get(i));
+            if(i == pilaImprimir.size()-1){
+            System.out.println("<- tope");
+            
+            System.out.println("");
+            }
+        }
+        System.out.println("*******");
+    }
+    public static void EliminarPila( Stack pilaImprimir)
+    {
+        for(int i = pilaImprimir.size()-1; i>=0; i--)
+        {
+            System.out.println(pilaImprimir.get(i));
+            if(i == pilaImprimir.size()-1){
+            System.out.println("<- tope");
+            
+            System.out.println("");
+            }
+        }
+        System.out.println("*******");
+    }
+    
+}
